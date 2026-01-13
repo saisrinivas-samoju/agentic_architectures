@@ -17,3 +17,6 @@ wheels/
 
 # Folders
 archive/
+
+# MkDocs build output
+site/

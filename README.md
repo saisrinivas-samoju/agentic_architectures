@@ -2,6 +2,8 @@
 
 A practical guide to the most important agentic design patterns used in modern AI systems. Each architecture includes a description, when to use it, key benefits, a Mermaid diagram, and notebooks in mini-projects folder for practical explanations.
 
+> **Full documentation with rendered diagrams:** [View Docs Site](https://saisrinivas-samoju.github.io/agentic_architectures)
+
 ---
 
 ## Table of Contents
@@ -17,6 +19,33 @@ A practical guide to the most important agentic design patterns used in modern A
 9. [Swarm (Decentralized Handoff)](#9-swarm-decentralized-handoff)
 10. [Hierarchical Multi-Agent Teams](#10-hierarchical-multi-agent-teams)
 11. [Architecture Selection Guide](#architecture-selection-guide)
+
+---
+
+## Installation
+
+This project uses [uv](https://docs.astral.sh/uv/) for dependency management.
+
+```bash
+# Clone the repo
+git clone https://github.com/saisrinivas-samoju/agentic_architectures.git
+cd agentic_architectures
+
+# Install dependencies
+uv sync
+
+# Install with dev dependencies (Jupyter)
+uv sync --group dev
+```
+
+## Running the Notebooks
+
+```bash
+# Launch Jupyter and open the mini-projects folder
+uv run jupyter notebook mini-projects/
+```
+
+Each notebook is self-contained and corresponds to one of the 10 architectures below.
 
 ---
 
@@ -53,14 +82,11 @@ flowchart TD
     E --> B
     C -->|No| F[Final Response]
     F --> G[User Output]
-
-    style A fill:#4CAF50,color:#fff
-    style B fill:#2196F3,color:#fff
-    style C fill:#FF9800,color:#fff
-    style D fill:#9C27B0,color:#fff
-    style F fill:#4CAF50,color:#fff
-    style G fill:#607D8B,color:#fff
 ```
+
+### Mini-Project
+
+[Smart Trip Budget Planner](mini-projects/01-smart-trip-budget-planner.ipynb) — A ReAct agent that uses web search and calculation tools to plan and price a custom travel itinerary.
 
 
 ## 2. Prompt Chaining
@@ -93,13 +119,11 @@ flowchart LR
     B --> C[Step 2: Analyze Draft]
     C --> D[Step 3: Finalize]
     D --> E[Final Output]
-
-    style A fill:#4CAF50,color:#fff
-    style B fill:#2196F3,color:#fff
-    style C fill:#2196F3,color:#fff
-    style D fill:#2196F3,color:#fff
-    style E fill:#4CAF50,color:#fff
 ```
+
+### Mini-Project
+
+[Blog Post Refiner](mini-projects/02-blog-post-refiner.ipynb) — A prompt chain that drafts, critiques, and polishes a blog post through sequential LLM steps.
 
 
 ## 3. Routing
@@ -135,14 +159,11 @@ flowchart TD
     C --> F[Response]
     D --> F
     E --> F
-
-    style A fill:#4CAF50,color:#fff
-    style B fill:#FF9800,color:#fff
-    style C fill:#2196F3,color:#fff
-    style D fill:#9C27B0,color:#fff
-    style E fill:#00BCD4,color:#fff
-    style F fill:#4CAF50,color:#fff
 ```
+
+### Mini-Project
+
+[Customer Support Router](mini-projects/03-customer-support-router.ipynb) — A router that classifies incoming customer queries and routes them to specialized support agents (billing, technical, general).
 
 
 ## 4. Parallelization
@@ -181,15 +202,11 @@ flowchart TD
     D --> F
     E --> F
     F --> G[Combined Output]
-
-    style A fill:#4CAF50,color:#fff
-    style B fill:#FF9800,color:#fff
-    style C fill:#2196F3,color:#fff
-    style D fill:#9C27B0,color:#fff
-    style E fill:#00BCD4,color:#fff
-    style F fill:#FF9800,color:#fff
-    style G fill:#4CAF50,color:#fff
 ```
+
+### Mini-Project
+
+[Editorial Review Board](mini-projects/04-editorial-review-board.ipynb) — Multiple specialist reviewers (tone, facts, grammar) analyze a document in parallel, and their feedback is merged into a unified editorial report.
 
 
 ## 5. Orchestrator-Worker
@@ -227,15 +244,11 @@ flowchart TD
     E --> F
     F --> B
     B -->|Synthesize| G[Final Output]
-
-    style A fill:#4CAF50,color:#fff
-    style B fill:#FF5722,color:#fff
-    style C fill:#2196F3,color:#fff
-    style D fill:#9C27B0,color:#fff
-    style E fill:#00BCD4,color:#fff
-    style F fill:#FFC107,color:#000
-    style G fill:#4CAF50,color:#fff
 ```
+
+### Mini-Project
+
+[Competitive Intelligence Report Generator](mini-projects/05-competitive-intelligence-report-generator.ipynb) — An orchestrator that dynamically plans and dispatches research workers to gather and synthesize competitive intelligence on companies.
 
 
 ## 6. Supervisor (Hierarchical)
@@ -272,14 +285,11 @@ flowchart TD
     B --> E{Task Complete?}
     E -->|No| B
     E -->|Yes| F[Final Response]
-
-    style A fill:#4CAF50,color:#fff
-    style B fill:#FF5722,color:#fff
-    style C fill:#2196F3,color:#fff
-    style D fill:#9C27B0,color:#fff
-    style E fill:#FF9800,color:#fff
-    style F fill:#4CAF50,color:#fff
 ```
+
+### Mini-Project
+
+[Data-Driven Market Analyzer](mini-projects/06-data-driven-market-analyzer.ipynb) — A supervisor that coordinates research and analysis agents iteratively to produce a comprehensive market analysis report.
 
 
 ## 7. Reflection / Self-Correction
@@ -315,14 +325,12 @@ flowchart TD
     D --> E{Acceptable?}
     E -->|No - Feedback| B
     E -->|Yes| F[Final Output]
-
-    style A fill:#4CAF50,color:#fff
-    style B fill:#2196F3,color:#fff
-    style C fill:#FFC107,color:#000
-    style D fill:#9C27B0,color:#fff
-    style E fill:#FF9800,color:#fff
-    style F fill:#4CAF50,color:#fff
 ```
+
+### Mini-Project
+
+[Self-Correcting Code Generator](mini-projects/07-self-correcting-code-generator.ipynb) — A generator-critic loop that writes code, tests it, identifies errors, and iteratively fixes them until the code passes all tests.
+
 
 ## 8. Evaluator-Optimizer
 
@@ -357,15 +365,12 @@ flowchart TD
     E -->|No| F[Structured Feedback + Score]
     F --> B
     E -->|Yes| G[Approved Output]
-
-    style A fill:#4CAF50,color:#fff
-    style B fill:#2196F3,color:#fff
-    style C fill:#FFC107,color:#000
-    style D fill:#E91E63,color:#fff
-    style E fill:#FF9800,color:#fff
-    style F fill:#F44336,color:#fff
-    style G fill:#4CAF50,color:#fff
 ```
+
+### Mini-Project
+
+[Audience-Adaptive Content Optimizer](mini-projects/08-audience-adaptive-content-optimizer.ipynb) — A generator-evaluator loop that adapts content to a target audience, scoring readability and relevance until a quality threshold is met.
+
 
 ## 9. Swarm (Decentralized Handoff)
 
@@ -400,17 +405,12 @@ flowchart TD
     B --> E[Response]
     C --> E
     D --> E
-
-    style A fill:#4CAF50,color:#fff
-    style B fill:#2196F3,color:#fff
-    style C fill:#9C27B0,color:#fff
-    style D fill:#00BCD4,color:#fff
-    style E fill:#4CAF50,color:#fff
-
-    linkStyle 1 stroke:#FF9800,stroke-width:2px
-    linkStyle 2 stroke:#FF9800,stroke-width:2px
-    linkStyle 3 stroke:#FF9800,stroke-width:2px
 ```
+
+### Mini-Project
+
+[Customer Service Swarm](mini-projects/09-customer-service-swarm.ipynb) — A swarm of specialist agents (sales, support, billing) that pass conversations between themselves based on the customer's needs.
+
 
 ## 10. Hierarchical Multi-Agent Teams
 
@@ -456,17 +456,11 @@ flowchart TD
     C -->|Team Report| B
     D -->|Team Report| B
     B --> I[Final Output]
-
-    style A fill:#4CAF50,color:#fff
-    style B fill:#F44336,color:#fff
-    style C fill:#FF9800,color:#fff
-    style D fill:#FF9800,color:#fff
-    style E fill:#2196F3,color:#fff
-    style F fill:#2196F3,color:#fff
-    style G fill:#9C27B0,color:#fff
-    style H fill:#9C27B0,color:#fff
-    style I fill:#4CAF50,color:#fff
 ```
+
+### Mini-Project
+
+[Full-Stack Project Builder](mini-projects/10-full-stack-project-builder.ipynb) — A hierarchical team where a top-level supervisor coordinates a research team and an engineering team to design and implement a full-stack application.
 
 ---
 
@@ -497,18 +491,6 @@ flowchart TD
     P -->|No| R{Many agents?}
     R -->|Yes| S[Hierarchical Teams]
     R -->|No| T[Orchestrator-Worker]
-
-    style A fill:#4CAF50,color:#fff
-    style D fill:#2196F3,color:#fff
-    style F fill:#2196F3,color:#fff
-    style H fill:#2196F3,color:#fff
-    style I fill:#2196F3,color:#fff
-    style L fill:#2196F3,color:#fff
-    style N fill:#2196F3,color:#fff
-    style O fill:#2196F3,color:#fff
-    style Q fill:#2196F3,color:#fff
-    style S fill:#2196F3,color:#fff
-    style T fill:#2196F3,color:#fff
 ```
 
 ### Quick Reference Table

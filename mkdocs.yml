@@ -1,0 +1,101 @@
+site_name: Agentic AI Architectures
+site_description: A practical guide to the most important agentic design patterns used in modern AI systems.
+
+site_url: https://saisrinivas-samoju.github.io/agentic_architectures
+repo_url: https://github.com/saisrinivas-samoju/agentic_architectures
+repo_name: saisrinivas-samoju/agentic_architectures
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  font:
+    text: Inter
+    code: JetBrains Mono
+  icon:
+    logo: material/robot-outline
+    repo: fontawesome/brands/github
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep purple
+      accent: cyan
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      accent: cyan
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.indexes
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.tabs.link
+    - content.tooltips
+    - toc.follow
+
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/saisrinivas-samoju/agentic_architectures
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - tables
+  - attr_list
+  - md_in_html
+  - def_list
+  - footnotes
+
+plugins:
+  - search
+
+nav:
+  - Home: index.md
+  - Architectures:
+    - architectures/index.md
+    - 1. Single Agent (ReAct): architectures/single-agent.md
+    - 2. Prompt Chaining: architectures/prompt-chaining.md
+    - 3. Routing: architectures/routing.md
+    - 4. Parallelization: architectures/parallelization.md
+    - 5. Orchestrator-Worker: architectures/orchestrator-worker.md
+    - 6. Supervisor: architectures/supervisor.md
+    - 7. Reflection / Self-Correction: architectures/reflection.md
+    - 8. Evaluator-Optimizer: architectures/evaluator-optimizer.md
+    - 9. Swarm: architectures/swarm.md
+    - 10. Hierarchical Teams: architectures/hierarchical-teams.md
+  - Selection Guide: architectures/selection-guide.md
+  - Mini-Projects:
+    - mini-projects/index.md

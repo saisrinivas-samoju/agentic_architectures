@@ -1,0 +1,145 @@
+/* ─────────────────────────────────────────────
+   FOOTER
+───────────────────────────────────────────── */
+
+/* Remove footer entirely */
+.md-footer {
+  display: none;
+}
+
+/* ─────────────────────────────────────────────
+   TYPOGRAPHY
+───────────────────────────────────────────── */
+
+.md-typeset h1 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.md-typeset h2 {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+  padding-bottom: 0.3em;
+  margin-top: 2em;
+}
+
+.md-typeset h3 {
+  font-weight: 600;
+}
+
+/* ─────────────────────────────────────────────
+   NAVIGATION
+───────────────────────────────────────────── */
+
+.md-header {
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* ─────────────────────────────────────────────
+   CONTENT WIDTH
+───────────────────────────────────────────── */
+
+.md-grid {
+  max-width: 1200px;
+}
+
+/* ─────────────────────────────────────────────
+   TABLES
+───────────────────────────────────────────── */
+
+.md-typeset table:not([class]) {
+  border-collapse: collapse;
+  border-radius: 0.4rem;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.md-typeset table:not([class]) th {
+  font-weight: 600;
+  background-color: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+}
+
+/* ─────────────────────────────────────────────
+   MERMAID DIAGRAMS
+───────────────────────────────────────────── */
+
+.mermaid {
+  display: flex;
+  justify-content: center;
+  margin: 1.5em 0;
+}
+
+/* ─────────────────────────────────────────────
+   ADMONITIONS
+───────────────────────────────────────────── */
+
+.md-typeset .admonition,
+.md-typeset details {
+  border-radius: 0.4rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+/* ─────────────────────────────────────────────
+   CODE BLOCKS
+───────────────────────────────────────────── */
+
+.md-typeset pre > code {
+  border-radius: 0.4rem;
+}
+
+/* ─────────────────────────────────────────────
+   BUTTONS
+───────────────────────────────────────────── */
+
+.md-typeset .md-button {
+  border-radius: 0.3rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: all 0.15s ease;
+}
+
+.md-typeset .md-button--primary {
+  background-color: var(--md-primary-fg-color);
+  border-color: var(--md-primary-fg-color);
+}
+
+.md-typeset .md-button--primary:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+
+/* ─────────────────────────────────────────────
+   DARK MODE TWEAKS
+───────────────────────────────────────────── */
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+[data-md-color-scheme="slate"] .md-header {
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* ─────────────────────────────────────────────
+   HOME PAGE HERO
+───────────────────────────────────────────── */
+
+.home-hero {
+  padding: 3rem 0 2rem;
+  text-align: center;
+}
+
+.home-hero h1 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.home-hero p {
+  font-size: 1.1rem;
+  color: var(--md-default-fg-color--light);
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
