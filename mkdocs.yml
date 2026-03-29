@@ -86,16 +86,90 @@ nav:
   - Home: index.md
   - Architectures:
     - architectures/index.md
-    - 1. Single Agent (ReAct): architectures/single-agent.md
-    - 2. Prompt Chaining: architectures/prompt-chaining.md
-    - 3. Routing: architectures/routing.md
-    - 4. Parallelization: architectures/parallelization.md
-    - 5. Orchestrator-Worker: architectures/orchestrator-worker.md
-    - 6. Supervisor: architectures/supervisor.md
-    - 7. Reflection / Self-Correction: architectures/reflection.md
-    - 8. Evaluator-Optimizer: architectures/evaluator-optimizer.md
-    - 9. Swarm: architectures/swarm.md
-    - 10. Hierarchical Teams: architectures/hierarchical-teams.md
+    - Part I — Core Patterns:
+      - 1. Single Agent (ReAct): architectures/single-agent.md
+      - 2. Prompt Chaining: architectures/prompt-chaining.md
+      - 3. Routing: architectures/routing.md
+      - 4. Parallelization: architectures/parallelization.md
+      - 5. Orchestrator-Worker: architectures/orchestrator-worker.md
+      - 6. Supervisor: architectures/supervisor.md
+      - 7. Reflection / Self-Correction: architectures/reflection.md
+      - 8. Evaluator-Optimizer: architectures/evaluator-optimizer.md
+      - 9. Swarm: architectures/swarm.md
+      - 10. Hierarchical Teams: architectures/hierarchical-teams.md
+    - Part II — Quality & Oversight:
+      - 11. Generator-Verifier: architectures/generator-verifier.md
+      - 12. Agent-as-a-Judge: architectures/llm-as-a-judge.md
+      - 13. Human-in-the-Loop: architectures/human-in-the-loop.md
+    - Part III — Pipelines & Cost:
+      - 14. Map-Reduce Agents: architectures/map-reduce.md
+      - 15. Mixture-of-Agents: architectures/mixture-of-agents.md
+      - 16. DAG Orchestration: architectures/dag-orchestration.md
+      - 17. Plan-and-Execute: architectures/plan-and-execute.md
+      - 18. Cascading Agents: architectures/cascading-agents.md
+    - Part IV — Multi-Agent Collaboration:
+      - 19. Blackboard Pattern: architectures/blackboard.md
+      - 20. Market-Based / Bidding: architectures/market-based.md
+      - 21. Contract Net Protocol: architectures/contract-net.md
+      - 22. Debate / Adversarial: architectures/debate.md
+      - 23. Red-Team Agent: architectures/red-team.md
+      - 24. Role-Based Collaboration: architectures/role-based.md
+      - 25. Conversational Multi-Agent: architectures/conversational-multi-agent.md
+      - 26. Event-Driven Multi-Agent: architectures/event-driven.md
+    - Part V — Reasoning Patterns:
+      - 27. Inner Monologue: architectures/inner-monologue.md
+      - 28. Speculative Execution: architectures/speculative-execution.md
+      - 29. Skeleton of Thought: architectures/skeleton-of-thought.md
+      - 30. ReAcTree: architectures/reactree.md
+    - Part VI — Domain Applications:
+      - 31. Agentic RAG: architectures/agentic-rag.md
+      - 32. Agentic Coding: architectures/agentic-coding.md
+      - 33. Self-Tooling Agent: architectures/self-tooling.md
+      - 34. Dynamic Tool Generation: architectures/dynamic-tool-generation.md
+    - Part VII — Cognitive Architectures:
+      - 35. Neuro-Symbolic Agent: architectures/neuro-symbolic.md
+      - 36. Dual-Paradigm Framework: architectures/dual-paradigm.md
+    - Part VIII — Advanced Planning & Search:
+      - 37. LATS: architectures/lats.md
+      - 38. Introspective MCTS: architectures/introspective-mcts.md
+      - 39. Reflective MCTS: architectures/reflective-mcts.md
+      - 40. Collaborative Tree Search: architectures/collaborative-tree-search.md
+      - 41. Beam Search for Agents: architectures/beam-search.md
+    - Part IX — Agent Protocols:
+      - 42. Model Context Protocol (MCP): architectures/mcp.md
+      - 43. Agent-to-Agent Protocol (A2A): architectures/a2a.md
+      - 44. Agent Communication Protocol (ACP): architectures/acp.md
+      - 45. Agent Network Protocol (ANP): architectures/anp.md
+    - Part X — Agent Memory System:
+      - 46. Episodic Memory: architectures/episodic-memory.md
+      - 47. Semantic Memory: architectures/semantic-memory.md
+      - 48. Procedural Memory: architectures/procedural-memory.md
+      - 49. Agentic Memory (A-MEM): architectures/agentic-memory.md
+      - 50. Collaborative Memory: architectures/collaborative-memory.md
+      - 51. Contextual Experience Replay: architectures/contextual-experience-replay.md
+      - 52. Meta-Memory: architectures/meta-memory.md
+    - Part XI — Safety & Resilience:
+      - 53. Guardrail Agent: architectures/guardrail.md
+      - 54. Circuit Breaker: architectures/circuit-breaker.md
+      - 55. Saga Pattern: architectures/saga-pattern.md
+      - 56. API Gateway / Gatekeeper: architectures/api-gateway.md
+      - 57. Least-Privilege Ephemeral Identity: architectures/least-privilege.md
+      - 58. Dead Letter / Escalation: architectures/dead-letter.md
+    - Part XII — Agent Infrastructure:
+      - 59. Agentic Mesh: architectures/agentic-mesh.md
+      - 60. Agent Registry and Discovery: architectures/agent-registry.md
+      - 61. Agent Control Plane: architectures/agent-control-plane.md
+      - 62. Data Flywheel: architectures/data-flywheel.md
+    - Part XIII — Embodied / Physical:
+      - 63. VLA Models: architectures/vla.md
+      - 64. Embodied AI: architectures/embodied-ai.md
+      - 65. World Models: architectures/world-models.md
+    - Part XIV — Frameworks & Meta-Approaches:
+      - 66. CoALA: architectures/coala.md
+      - 67. AEGIS Framework: architectures/aegis.md
+      - 68. ADAS: architectures/adas.md
+      - 69. Self-Evolving Agents (MASE): architectures/self-evolving.md
+      - 70. Nested Learning: architectures/nested-learning.md
   - Selection Guide: architectures/selection-guide.md
   - Mini-Projects:
     - mini-projects/index.md
